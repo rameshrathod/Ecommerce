@@ -18,7 +18,7 @@ include 'adminmenu.html';
 		
 		    <p>Login Window</p>
 
-                <input type = "image" id = "close_login" src = "images/close.png">
+                <input type = "image" id = "close_login" src = "../images/close.png">
                 <form method = "post" action = "user_check.php">
                 <input type ="text" id = "login" placeholder = "User Id" name = "uid">
                 <input type = "password" id = "password" name = "upass" placeholder = "******"><br><br>
@@ -34,7 +34,7 @@ include 'adminmenu.html';
 		
 		    <p>Forgot password window</p>
 
-                		<input type = "image" id = "close_login2" src = "images/close.png">
+                		<input type = "image" id = "close_login2" src = "../images/close.png">
                 <form method = "post" action = "forgetpass.php">
                			<input type ="text" id = "email" placeholder = "Email Id" name = "eid"><br><br>
              			<input type ="text" id = "mobile" placeholder = "Mobile Number" name = "mobno"><br><br>
@@ -50,7 +50,7 @@ include 'adminmenu.html';
 		
 		    <p>New User Registration</p>
 
-                	<input type = "image" id = "close_login1" src = "images/close.png">
+                	<input type = "image" id = "close_login1" src = "../images/close.png">
                 <form method = "post" action = "register.php" name="frm">
                 	<input type ="text" id = "FirstName" placeholder = "First Name" name = "fname">
                 	<input type ="text" id = "LastName" placeholder = "Last Name" name = "lname"><br><br>
@@ -99,7 +99,7 @@ include 'adminmenu.html';
 		
 		    <p>New User Registration</p>
 
-                	<input type = "image" id = "close_login3" src = "images/close.png">
+                	<input type = "image" id = "close_login3" src = "../images/close.png">
                 <form method = "post" action = "register.php" name="frm" onclick="return validateform()">
                 	<input type ="text" id = "FirstName" placeholder = "First Name" name = "fname">
                 	<input type ="text" id = "LastName" placeholder = "Last Name" name = "lname"><br><br>
@@ -147,7 +147,7 @@ include 'adminmenu.html';
 		
 		    <p>About Us Window</p>
 
-                		<input type = "image" id = "close_login4" src = "images/close.png">
+                		<input type = "image" id = "close_login4" src = "../images/close.png">
                 <form method = "post" action = "forgetpass.php">
                 <p><input type = "image" id = "my_img" src = "images/imgA.jpg"></p>
                 <br>

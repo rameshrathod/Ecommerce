@@ -2,9 +2,8 @@
 
 include '../database/database.php';
 
-$userId=$_POST['uid'];
-$pass=$_POST['upass'];
-var_dump($userId);
+		$userId=$_POST['uid'];
+		$pass=$_POST['upass'];
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -14,24 +13,50 @@ if ($conn->connect_error)
 {
 	die("Connection failed: " . $conn->connect_error);
 }
-
-function  toString($userId)
+else 
 {
-	return $userId;
+		if(!is_numeric($userId))//login via email id
+		
+		{
+			$sql_query="select * from login where email_id=\"$userId\" and password=\"$pass\"";
+			
+		}
 	
-}
-$email="email_id="."'$userId'.";
-$mobile="mobile_no=$userId";
-$sql_query ="select * from login where ".$email;
-//$sql_query = "select * from login where email_id=".$userId;
-echo $sql_query;
-//echo "<br>select * from login where ((email_id=\"$userId\")or(mobile_no=$userId))and(password=\"$pass\")";
+		 else if(is_numeric($userId))//login via mobile no
+		{
+			
+		$sql_query="select * from login where mobile_no=$userId and password=\"$pass\"";
+				
+		
+		}
 
-$result = $conn->query($sql_query);
-var_dump($result);
-
-
+	$result = $conn->query($sql_query);//sql query fired
+	if($result->num_rows>0)
+	{
+		while ($row =$result->fetch_assoc())//result taken into row
+			{
+		
+						if($row['categary']=="user")//categary is checked
+						{
+							header('Location:../user/userIndex.php');//redirected to user logged in page.
+						}
+						else if($row['categary']=="admin")//categary is checked
+						{
+							header('Location:../admin/myadmin.php');//redirected to admin logged in page.
+						}
+				
+			}
+		
+	}
+	else 
+	{
+		echo "wrong user id or password <br>";//login failed
+		echo '<a href="../index.php">click here to login</a>';//on click goes to index.php
+		
+	}	
 	
+mysqli_close($conn);
+}	
 
 ?>
 
