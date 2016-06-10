@@ -1,0 +1,567 @@
+
+ /* Horizontal Menu */
+    #menu {
+    width:900px;
+   height: 0px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 100px;
+    margin-left: 100px;
+
+   box-sizing:border-box;
+   font-family:helvetica;
+   
+    
+       }
+
+    ul#navlist {
+    margin: 10px -15px 6px -15px;
+    padding: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+    
+    }
+
+    #navlist li {
+    display: inline;
+    list-style-type: none;
+    float: left;
+    padding: 0px 0;
+    }
+    
+
+
+    #navlist a {
+    padding: 12px 14px;
+    }
+
+    #navlist a:link, #navlist a:visited {
+    color: #246;
+    background-color:#5DADE2;
+    text-decoration: none;
+    }
+    
+      #show_login a:button, #navlist a:visited {
+    color: #246;
+    background-color:#338BFF;
+    text-decoration: none;
+    }
+    #show_register a:button, #navlist a:visited {
+    color: #FFF;
+    background-color:#5DADE2;
+    text-decoration: none;
+    }
+
+    #navlist a:hover {
+    color: #fff;
+    background-color: #369;
+    text-decoration: none;
+    } 
+
+/*hhhhh*/
+
+#loginform
+{
+	padding:10px;
+   width:350px;
+   height:320px;
+   margin-top:80px;
+   margin-left: -462px;
+   background-color:gray;
+   border-radius:3px;
+   box-shadow:0px 0px 10px 0px #424242;
+   box-sizing:border-box;
+   font-family:helvetica;
+   visibility:hidden;
+   display:none;
+}
+#loginform #close_login
+{
+   position:absolute;
+   top:140px;
+   left:470px;
+   width:15px;
+   height:15px;
+   background-color:white;
+}
+#loginform p
+{
+   margin-top:40px;
+   font-size:22px;
+   color:#FFFFFF;
+}
+#loginform #login
+{
+   width:250px;
+   height:40px;
+   border:2px solid silver;
+   border-radius:3px;
+   padding:5px;
+}
+#loginform #password
+{
+   margin-top:5px;
+   width:250px;
+   height:40px;
+   border:2px solid silver;
+   border-radius:3px;
+   padding:5px;
+}
+#loginform #dologin
+{
+   margin-left:-5px;
+   margin-top:10px;
+   width:100px;
+   height:40px;
+   border:none;
+   border-radius:3px;
+   color:#FFFFFF;
+   background-color:#2C3E50;
+   font-size:25px;
+}
+
+#loginform #reg
+{
+   margin-top:5px;
+   font-size:22px;
+   color:#FFFFFF;
+}
+#loginform #forgot_pass
+{
+margin-left:-5px;
+   margin-top:10px;
+   width:210px;
+   height:40px;
+   border:none;
+   border-radius:3px;
+   color:#FFFFFF;
+   background-color:#2C3E50;
+   font-size:25px;
+}
+
+#loginform #show_register1
+{
+margin-left:-5px;
+   margin-top:10px;
+   width:210px;
+   height:40px;
+   border:none;
+   border-radius:3px;
+   color:#FFFFFF;
+   background-color:#2C3E50;
+   font-size:25px;
+}
+
+/*registration*/
+#registerform
+{
+   width:400px;
+   height:750px;
+   margin-top:80px;
+   margin-left: -320px;
+   background-color:#585858;
+   border-radius:3px;
+   box-shadow:0px 0px 10px 0px #424242;
+   padding:10px;
+   box-sizing:border-box;
+   font-family:helvetica;
+   visibility:hidden;
+   display:none;
+}
+#registerform #close_login1
+{
+   position:absolute;
+   top:140px;
+   left:560px;
+   width:15px;
+   height:15px;
+   background-color:#ffffff;
+}
+#registerform p
+{
+   margin-top:40px;
+   font-size:22px;
+   color:#E6E6E6;
+}
+#registerform #FirstName
+{
+   margin-top:5px;
+   width:250px;
+   height:40px;
+   border:2px solid silver;
+   border-radius:3px;
+   padding:5px;
+}
+#registerform #LastName
+{
+   margin-top:5px;
+   width:250px;
+   height:40px;
+   border:2px solid silver;
+   border-radius:3px;
+   padding:5px;
+}
+#registerform #dob
+{
+   margin-top:5px;
+   width:250px;
+   height:40px;
+   border:2px solid silver;
+   border-radius:3px;
+   padding:5px;
+}
+#registerform #check
+{
+   width:350px;
+   height:35px;
+   color:white;
+   border-radius:3px;
+   padding:05px;
+   font-size:18px;
+}
+#registerform #email
+{
+   margin-top:5px;
+   width:250px;
+   height:40px;
+   border:2px solid silver;
+   border-radius:3px;
+   padding:5px;
+}
+#registerform #mobileNumber
+{
+   margin-top:5px;
+   width:250px;
+   height:40px;
+   border:2px solid silver;
+   border-radius:3px;
+   padding:5px;
+}
+#registerform #pinCode
+{
+   margin-top:5px;
+   width:100px;
+   height:40px;
+   border:2px solid silver;
+   border-radius:3px;
+
+}
+#registerform #countryId
+{
+   margin-top:5px;
+   width:150px;
+   height:40px;
+   border:2px solid silver;
+   border-radius:3px;
+
+}
+#registerform #stateId
+{
+   margin-top:5px;
+   width:100px;
+   height:40px;
+   border:2px solid silver;
+   border-radius:3px;
+   
+}
+#registerform #cityId
+{
+   margin-top:5px;
+   width:150px;
+   height:40px;
+   border:2px solid silver;
+   border-radius:3px;
+  
+}
+
+#registerform #password
+{
+   margin-top:5px;
+   width:250px;
+   height:40px;
+   border:2px solid silver;
+   border-radius:3px;
+   padding:5px;
+}
+#registerform #cpassword
+{
+   margin-top:5px;
+   width:250px;
+   height:40px;
+   border:2px solid silver;
+   border-radius:3px;
+   padding:5px;
+}
+#registerform #dologin
+{
+margin-left:-5px;
+   margin-top:10px;
+   width:210px;
+   height:40px;
+   border:none;
+   border-radius:3px;
+   color:#FFFFFF;
+   background-color:#2C3E50;
+   font-size:25px;
+}
+
+
+
+/*forgot password*/
+#forgotpass
+{
+	
+	width:350px;
+   height:320px;
+   margin-top:70px;
+   margin-left: -462px;
+   background-color:gray;
+   border-radius:3px;
+   box-shadow:0px 0px 10px 0px #424242;
+   padding:20px;
+   box-sizing:border-box;
+   font-family:helvetica;
+   visibility:hidden;
+   display:none;
+	
+}
+ #forgotpass #close_login2
+{
+   position:absolute;
+   top:140px;
+   left:460px;
+   width:15px;
+   height:15px;
+     background-color:white;
+}
+#forgotpass p
+{
+   margin-top:40px;
+   font-size:22px;
+   color:#E6E6E6;
+}
+#forgotpass #email
+{
+   width:150px;
+   height:40px;
+   border:2px solid silver;
+   border-radius:3px;
+   padding:5px;
+}
+#forgotpass #mobile
+{
+   width:150px;
+   height:40px;
+   border:2px solid silver;
+   border-radius:3px;
+   padding:5px;
+}
+
+#forgotpass #pass_submit
+{
+margin-left:-5px;
+   margin-top:10px;
+   width:150px;
+   height:40px;
+   border:none;
+   border-radius:3px;
+   color:#FFFFFF;
+   background-color:#2C3E50;
+   font-size:25px;
+}
+
+/*registration*/
+#registerform1
+{
+   width:400px;
+   height:750px;
+   margin-top:80px;
+   margin-left: -320px;
+   background-color:#585858;
+   border-radius:3px;
+   box-shadow:0px 0px 10px 0px #424242;
+   padding:10px;
+   box-sizing:border-box;
+   font-family:helvetica;
+   visibility:hidden;
+   display:none;
+}
+#registerform1 #close_login3
+{
+   position:absolute;
+   top:140px;
+   left:560px;
+   width:15px;
+   height:15px;
+   background-color:#ffffff;
+}
+#registerform1 p
+{
+   margin-top:40px;
+   font-size:22px;
+   color:#E6E6E6;
+}
+#registerform1 #FirstName
+{
+   margin-top:5px;
+   width:250px;
+   height:40px;
+   border:2px solid silver;
+   border-radius:3px;
+   padding:5px;
+}
+#registerform1 #LastName
+{
+   margin-top:5px;
+   width:250px;
+   height:40px;
+   border:2px solid silver;
+   border-radius:3px;
+   padding:5px;
+}
+#registerform1 #dob
+{
+   margin-top:5px;
+   width:250px;
+   height:40px;
+   border:2px solid silver;
+   border-radius:3px;
+   padding:5px;
+}
+#registerform1 #check
+{
+   width:350px;
+   height:35px;
+   color:white;
+   border-radius:3px;
+   padding:05px;
+   font-size:18px;
+}
+#registerform1 #email
+{
+   margin-top:5px;
+   width:250px;
+   height:40px;
+   border:2px solid silver;
+   border-radius:3px;
+   padding:5px;
+}
+#registerform1 #mobileNumber
+{
+   margin-top:5px;
+   width:250px;
+   height:40px;
+   border:2px solid silver;
+   border-radius:3px;
+   padding:5px;
+}
+#registerform1 #pinCode
+{
+   margin-top:5px;
+   width:100px;
+   height:40px;
+   border:2px solid silver;
+   border-radius:3px;
+
+}
+#registerform1 #countryId
+{
+   margin-top:5px;
+   width:150px;
+   height:40px;
+   border:2px solid silver;
+   border-radius:3px;
+
+}
+#registerform1 #stateId
+{
+   margin-top:5px;
+   width:100px;
+   height:40px;
+   border:2px solid silver;
+   border-radius:3px;
+   
+}
+#registerform1 #cityId
+{
+   margin-top:5px;
+   width:150px;
+   height:40px;
+   border:2px solid silver;
+   border-radius:3px;
+  
+}
+
+#registerform1 #password
+{
+   margin-top:5px;
+   width:250px;
+   height:40px;
+   border:2px solid silver;
+   border-radius:3px;
+   padding:5px;
+}
+#registerform1 #cpassword
+{
+   margin-top:5px;
+   width:250px;
+   height:40px;
+   border:2px solid silver;
+   border-radius:3px;
+   padding:5px;
+}
+#registerform1 #dologin
+{
+margin-left:-5px;
+   margin-top:10px;
+   width:210px;
+   height:40px;
+   border:none;
+   border-radius:3px;
+   color:#FFFFFF;
+   background-color:#2C3E50;
+   font-size:25px;
+}
+
+
+/*about us*/
+#aboutus
+{
+   width:500px;
+   height:450px;
+   margin-top:60px;
+   margin-left: -462px;
+   background-color:gray;
+   border-radius:3px;
+   box-shadow:0px 0px 10px 0px #424242;
+   padding:10px;
+   box-sizing:border-box;
+   font-family:helvetica;
+   visibility:hidden;
+   display:none;
+}
+#aboutus #close_login4
+{
+   position:absolute;
+   top:140px;
+   left:540px;
+   width:15px;
+   height:15px;
+     background-color:white;
+}
+#aboutus #my_img
+{
+	padding:60px 20px 30px 50;
+   position:absolute;
+   top:140px;
+   left:60px;
+   width:300px;
+   height:150px;
+}
+
+#aboutus p
+{
+   margin-top:40px;
+   font-size:22px;
+   color:#FFFFFF;
+}
