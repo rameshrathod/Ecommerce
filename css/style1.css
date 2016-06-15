@@ -1,12 +1,13 @@
 
  /* Horizontal Menu */
     #menu {
-    width:950px;
+    width:900px;
    height: 0px;
     margin-top: 50px;
     margin-bottom: 50px;
     margin-right: 100px;
-    margin-left: 200px;
+    margin-left: 100px;
+
    box-sizing:border-box;
    font-family:helvetica;
    
@@ -14,7 +15,7 @@
        }
 
     ul#navlist {
-    margin: 10px -30px 6px -30px;
+    margin: 10px -15px 6px -15px;
     padding: 10px;
     white-space: nowrap;
     font-weight: bold;
@@ -25,13 +26,13 @@
     display: inline;
     list-style-type: none;
     float: left;
-    padding: 1px;
+    padding: 0px 0;
     }
     
 
 
     #navlist a {
-    padding: 14px;
+    padding: 12px 14px;
     }
 
     #navlist a:link, #navlist a:visited {
@@ -568,18 +569,14 @@ margin-left:-5px;
 
 #products
 {
-   width:750px;
+   width:500px;
    height:450px;
-   
-   
-       margin-top: 0px;
-    margin-bottom: 50px;
-    margin-right: 100px;
-    margin-left: -130px;
+   margin-top:60px;
+   margin-left: -260px;
    background-color:orange;
    border-radius:3px;
    box-shadow:0px 0px 10px 0px #424242;
-   padding:0px;
+   padding:10px;
    box-sizing:border-box;
    font-family:helvetica;
    visibility:hidden;
@@ -588,8 +585,8 @@ margin-left:-5px;
 #products #close_login5
 {
    position:absolute;
-   top:120px;
-   left:800px;
+   top:140px;
+   left:540px;
    width:15px;
    height:15px;
      background-color:white;

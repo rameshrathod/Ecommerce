@@ -1,7 +1,7 @@
 <html>
    <head>
      
- 
+
    </head>
    
    <body>
@@ -158,6 +158,20 @@ include 'usermenu.html';
 
         </div>
         
+         <div id ="products">
+		
+		    <p>products</p>
+
+                		<input type = "image" id = "close_login5" src = "../images/close.png">
+                <form method = "post" action = "forgetpass.php">
+                <p></p>
+                <br>
+                <br>
+                <br>
+            	</form>
+
+        </div>
+
          
         
        

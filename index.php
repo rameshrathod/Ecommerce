@@ -1,6 +1,5 @@
 <html>
    <head>
-
    </head>
    
  
@@ -145,6 +144,7 @@ include 'menu.html';
             </form>
 
         </div>
+        		<center>
         <div id = "aboutus">
 		
 		    <p>About Us Window</p>
@@ -158,12 +158,165 @@ include 'menu.html';
             	</form>
 
         </div>
+        </center>
         
-         
         
-       
-     </center>
+        <div id ="products">
+		<BR/>
+		    <h3>Products</h3>
+		    <hr color="black">
+		     <hr color="white">
 
+                <input type = "image" id = "close_login5" src = "images/close.png">
+                <form method = "post" action = "forgetpass.php">
+            
+            <center>
+             			<table border="1">
+             			<tr>
+             			<th>Electronics</th>
+             			<th>Fashion</th>
+             			<th>Kids</th>
+             			<th>Home and Living</th>
+             			<th>Automotive</th>
+             			<th>Books and Musics</th>
+             			
+             			
+             			</tr>
+             			<tr>
+             			<td >
+             			
+		             		
+		             			<ul>
+						             <li><a href="">Mobiles and Tabs</a></li>
+						             <li><a href="">Computers and Laptops</a></li>
+						             <li><a href="">Tv and Audio-Video</a></li>
+						             <li><a href="">Home appliances</a></li>
+						             <li><a href="">Cameras and Accessories</a></li>
+						             <li><a href="">Stationary and Office Equipment</a></li>
+					             </ul>
+			      
+			             </td>
+			             <td>  
+						              <ul >
+						                 <li><a href="">Cloths</a></li>
+						                 <li><a href="">Footwear</a></li>
+						                 <li><a href="">Eyewear</a></li>
+						                 <li><a href="">Cloths</a></li>
+						                 <li><a href="">Bags and Luggage</a></li>
+						                 <li><a href="">Grooming & Personal Care</a></li>
+						                 <li><a href="">Watches</a></li>
+						                 <li><a href="">Fashion Accessories</a></li>
+						             
+			             		</ul>
+			        	
+			        	 </td>
+			        	 <td>
+			        	
+			 					<ul >
+						                 <li><a href="">Toys and Games</a></li>
+						                 <li><a href="">Kids Accessories</a></li>
+						                 <li><a href="">Baby Care and Maternity</a></li>
+						                 <li><a href="">School Supplies</a></li>
+						                 <li><a href="">Bags and Luggage</a></li>
+						                 <li><a href="">Baby & Kids Room Essentials</a></li>
+						                 <li><a href="">Watches</a></li>
+						                 <li><a href="">Fashion Accessories</a></li>
+						             
+			             		</ul>
+			               </td>
+			               <td>
+			           
+				               <ul >
+						                 <li><a href="">Cloths</a></li>
+						                 <li><a href="">Footwear</a></li>
+						                 <li><a href="">Eyewear</a></li>
+						                 <li><a href="">Cloths</a></li>
+						                 <li><a href="">Bags and Luggage</a></li>
+						                 <li><a href="">Grooming & Personal Care</a></li>
+						                 <li><a href="">Watches</a></li>
+						                 <li><a href="">Fashion Accessories</a></li>
+						             
+			             		</ul>
+			            
+			                </td>
+			                <td>
+			                
+				                	<ul >
+						                 <li><a href="">Cloths</a></li>
+						                 <li><a href="">Footwear</a></li>
+						                 <li><a href="">Eyewear</a></li>
+						                 <li><a href="">Cloths</a></li>
+						                 <li><a href="">Bags and Luggage</a></li>
+						                 <li><a href="">Grooming & Personal Care</a></li>
+						                 <li><a href="">Watches</a></li>
+						                 <li><a href="">Fashion Accessories</a></li>
+						             
+			             		</ul>
+			                 </td>
+			                 <td>
+			                 
+				                 <ul>
+						                 <li><a href="">Cloths</a></li>
+						                 <li><a href="">Footwear</a></li>
+						                 <li><a href="">Eyewear</a></li>
+						                 <li><a href="">Cloths</a></li>
+						                 <li><a href="">Bags and Luggage</a></li>
+						                 <li><a href="">Grooming & Personal Care</a></li>
+						                 <li><a href="">Watches</a></li>
+						                 <li><a href="">Fashion Accessories</a></li>
+						             
+			             		</ul>
+			                 
+			                  </td>
+			                </tr>        
+             </table>
+             </center>
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+            	</form>
+
+        </div>
+
+     </center>
+     
+     <div>
+     		
+     			<div>
+				<?php 
+				
+$db = mysqli_connect("localhost:3306","root","root","ecommerce"); //keep your db name
+$sql = "SELECT product_img FROM product_details";
+$sth = $db->query($sql);
+//$result=mysqli_fetch_array($sth);
+while($result=mysqli_fetch_array($sth))
+{
+echo '<img src="data:image/jpeg;base64,'.base64_encode( $result['product_img'] ).'" height="250" width="200"/>';
+}
+								
+						
+				?>
+     			
+     			
+     			
+     			</div>
+     
+     
+     
+     </div>
+     
+     
      
 </div>
 

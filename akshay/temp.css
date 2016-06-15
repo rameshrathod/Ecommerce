@@ -1,0 +1,19 @@
+@CHARSET "ISO-8859-1";
+
+div.page-init-control{
+	border-radius: 25px;
+    background: #A4A4A4;
+    padding: 20px; 
+    height:70px; 
+}
+
+div.mini-product{
+	background-color:antiquewhite;
+	width:22%;
+	height:400px;
+	position:relative;
+	display:block;
+	float:left;
+	margin:10px;
+	border:1px solid;
+}
