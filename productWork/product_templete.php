@@ -5,7 +5,6 @@ include 'DB.php';
 include 'PageInit.php';
 
 
-
 //check parameter present in url otherwise set to defaults
 if (!isset($_GET['records_per_page']))
 {

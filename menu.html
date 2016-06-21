@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
-  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <link rel="stylesheet" type="text/css" href="./css/style1.css">
      <script type="text/javascript" src="./js/jquery.js"></script>
      <script type="text/javascript" src="./js/pop_up_effect.js"></script>
      <script type="text/javascript" src="./js/jq.js"></script>
@@ -17,8 +17,36 @@
    }
    </style>
 </head>
-<body>
+<body     style="width: 824px;">
+   	<div id="logo">
+   		
+   		<img alt="" src="images/logo.jpg" id="logo-img">
+   		
+   	</div>
+   		<div id="search">
+			<form name="myForm"  onsubmit="return searchValidate()" action="searched_products.php"  >
+			<input type="search" id="search-here" name="search" id="search"/><input type="submit" value="Search" id="search-submit" />
+			<script type="text/javascript">
+			
+			function searchValidate()
 
+			{
+				
+				var search = document.forms["myForm"]["search"].value;
+			    if (search== null || search== "") //name should not be empty
+			    {
+			    	
+			        alert("search must be filled out");
+			        document.forms["myForm"]["search"].focus();
+			        return false;
+			    }
+				
+			}
+			
+			</script>
+			
+			</form>
+		</div>
 <div id="menu">
 <ul id="navlist">
 <li class="home"><a href="#" >HOME</a>
