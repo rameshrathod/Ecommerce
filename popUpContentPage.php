@@ -157,7 +157,13 @@
                
             
 					</font size="8" color="red">
-						<?php include 'all_categaries.php';?>
+							<table>
+						<tr>	
+						
+							<th>Electronics</th>
+		
+			
+							</tr>
              			<tr>
              			<td >
              			

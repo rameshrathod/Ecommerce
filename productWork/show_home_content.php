@@ -1,8 +1,8 @@
 
 <link rel='stylesheet' type='text/css' href='css/temp.css'><script src='valid.js'></script>
 <?php
-//include 'database/DB.php';
-//include 'PageInit.php';
+include 'database/DB.php';
+include 'PageInit.php';
 
 //create obj of DB
 $db=new DB();
