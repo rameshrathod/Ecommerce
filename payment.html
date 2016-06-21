@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>payment_form</title>
+<style>
+body{
+background: #c68c53;
+}
+
+div{
+height:500px;
+width:350px;
+background:url("wood.jpg");
+
+}
+
+h1{
+color:#ffa31a;
+}
+
+</style>
+</head>
+<body>
+<center>
+<div>
+<form>
+<br>
+<h1>Pay Here</h1>
+
+<table>
+<tr><td><label><b>Card No:</b></label></td><td><input type="text" pattern="^\d{16}" required></td></tr><br><br>
+<tr><td><label><b>CVV:</b></label></td><td><input type="text" pattern="^\d{3}" required></td></tr><br><br>
+<tr><td><label><b>Valid till:</b></label></td><td><input type="text" placeholder="format: mm/yy" pattern="^\d{2}/\d{2}$" required></td></tr><br><br>
+<tr><td><label><b>Pin No:</b></label></td><td><input type="text" pattern="^\d{4}" required></td></tr><br><br>
+</table>
+<br>
+<input type="submit" value="SUBMIT" align="center" style="font-face: 'Comic Sans MS'; font-size: larger; color: #ffa31a; background-color: #331a00; border: 3pt ridge lightgrey">
+</form>
+</div>
+</center>
+</body>
+</html>
