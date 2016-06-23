@@ -31,7 +31,7 @@
 	
 	public function fetchRecordsForHome($cat)
 	{
-		$sql_query="SELECT product_name,product_price,product_discount,product_img from product_details where product_category='$cat' order by product_id desc";
+		$sql_query="SELECT product_id,product_name,product_price,product_discount,product_img from product_details where product_category='$cat' order by product_id desc";
 		$result = $this->db_connection->query($sql_query);
 		return $result;
 	}
@@ -136,11 +136,29 @@
 	public function MainCategaries($table_name)
 	{
 	
-		$sql_query="select COLUMN_NAME from INFORMATION_SCHEMA.COLUMNS where TABLE_NAME=\"$table_name\"";
+		$sql_query="select distinct category_name from $table_name";
 		$result = $this->db_connection->query($sql_query);
 		return $result;
 	
 	}
+	public function subCategaries($table_name,$cat)
+	{
+	
+		$sql_query="select sub_category_name from ".$table_name." where category_name=\"$cat\"";
+		$result1 = $this->db_connection->query($sql_query);
+		return $result1;
+	
+	}
+	
+	public function fetchProductDetails($table_name,$pid)
+	{
+	
+		$sql_query="select * from ".$table_name." where product_id=\"$pid\"";
+		$result = $this->db_connection->query($sql_query);
+		return $result;
+	
+	}
+	
 	public function closeConnection()
 	{
 		$this->db_connection=null;

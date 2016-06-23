@@ -37,7 +37,7 @@ class PageInit
 				echo '<br><b>Name:</b>'.$result['product_name'].'<br>';
 				echo '<br><b>Price:</b>'.$result['product_price'].'<br>';
 				echo '<br><b>Discount:</b>'.$result['product_discount'].'<br>';
-				echo '<input type="submit" value="View Details" id="product-detail-btn"';
+				echo "<a href='details.php?pid=".$result['product_id']."'><input type='button' value='View Details' id='product-detail-btn'/></a>";
 				
 				echo '<p>';
 				echo "</center></div>";
@@ -339,15 +339,21 @@ class PageInit
 			echo "<div>";		
 			for($k=$start;$k<$end;$k++)
 			{  
-				$records->data_seek($k);
-				$row = mysqli_fetch_row($records);
-				echo "<div class='mini-product'><center>";
-				for($j=0;$j<$column_count;$j++)
-				 {
-					echo "<span>$fields[$j] = $row[$j]</span><br>";
 				
-				 }
-				 echo "</center></div>";			
+			$records->data_seek($k);
+				    if($result = mysqli_fetch_array($records))
+				    {
+						echo "<div class='mini-product'><center>";
+						echo '<img src="data:image/jpeg;base64,'.base64_encode( $result['product_img'] ).'" id="product-img"/>';
+						echo '<p id="product-content-p">';
+						echo '<br><b>Name:</b>'.$result['product_name'].'<br>';
+						echo '<br><b>Price:</b>'.$result['product_price'].'<br>';
+						echo '<br><b>Discount:</b>'.$result['product_discount'].'<br>';
+						echo "<a href='details.php?pid=".$result['product_id']."'><input type='button' value='View Details' id='product-detail-btn'/></a>";
+				
+						echo '<p>';
+						 echo "</center></div>";
+				   	 }						
 			}
 			echo "</div>";
 									
@@ -504,7 +510,7 @@ class PageInit
 						echo '<br><b>Name:</b>'.$result['product_name'].'<br>';
 						echo '<br><b>Price:</b>'.$result['product_price'].'<br>';
 						echo '<br><b>Discount:</b>'.$result['product_discount'].'<br>';
-						echo '<input type="submit" value="View Details" id="product-detail-btn"';
+						echo "<a href='details.php?pid=".$result['product_id']."'><input type='button' value='View Details' id='product-detail-btn'/></a>";
 				
 						echo '<p>';
 						 echo "</center></div>";
@@ -517,26 +523,65 @@ class PageInit
 		
 		public function MainCategaryDisplay($records)
 		{
-			
-		echo "<table>";
-		echo "<tr>";
-		
-		if($result = mysqli_fetch_array($records))
-		{
-			
-			while($result)
+			$i=-1;
+		//echo "<div id='cat'><table>";
+		//echo "<tr>";
+	
+			while($result = mysqli_fetch_array($records))
 			{
-		 
-			
-			
-			echo "<th>". $result['COLUMN_NAME']."</th>";
-		
+		     $i++;
+			//echo "<th>". $result['category_name']."</th>";
+			$cols[$i]=$result['category_name'];
 			
 			}	
-		}
-			echo "</tr>";
+		
+			//echo "</tr>";
+			
+			//echo "<tr>";
+			$db=new DB();
+			$con=$db->getConnection();
+			for($j=0;$j<=$i;$j++)
+			{
+			$subcat=$db->subCategaries("prooduct_categories",$cols[$j]);
+			
+			
+			//echo "<td>";
+			$k=-1;
+			while($row = mysqli_fetch_array($subcat))
+			{
+			$k++;
+				//echo $row['sub_category_name']."<br>";
+				$cols[$j][$k]=$row['sub_category_name'];
+				
+			}
+			//echo "</td>";
+			
+			}
+			//echo "</tr></div>";
+			return $cols;
 		}//end of MainCategaryDisplay Method
 		
+
+		
+		public function dispProductDetails($records)
+		{
+			if($result = mysqli_fetch_array($records))
+			{
+				echo "<div class='details-of-product'><center>";
+				echo '<img src="data:image/jpeg;base64,'.base64_encode( $result['product_img'] ).'" id="product-img"/>';
+				echo '<p id="product-content-p">';
+				echo '<br><b>Name:</b>'.$result['product_name'].'<br>';
+				echo '<br><b>Price:</b>'.$result['product_price'].'<br>';
+				echo '<br><b>Discount:</b>'.$result['product_discount'].'<br>';
+				
+				echo "<a href='details.php?pid=".$result['product_id']."'><input type='button' value='Add To Cart' id='product-detail-btn'/></a>";
+				echo "<a href='details.php?pid=".$result['product_id']."'><input type='button' value='Buy' id='product-detail-btn'/></a>";
+				echo '<br><b>Product Description:</b><br>'.$result['product_description'].'<br>';
+				echo '<p>';
+				echo "</center></div>";
+			}
+			
+		}
 		
 	
 }//end of class

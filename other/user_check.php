@@ -38,11 +38,19 @@ else
 		
 						if($row['categary']=="user")//categary is checked
 						{
-							header('Location:../user/userIndex.php');//redirected to user logged in page.
+							session_start();
+							$_SESSION['timeout'] = time();
+							$_SESSION["user_id"] =$row['user_id'];
+							$_SESSION["categary"] =$row['categary'];
+							header('Location:../user/home.php');//redirected to user logged in page.
 						}
 						else if($row['categary']=="admin")//categary is checked
 						{
-							header('Location:../admin/myadmin.php');//redirected to admin logged in page.
+							session_start();
+							$_SESSION['timeout'] = time();
+							$_SESSION["user_id"] =$row['user_id'];
+							$_SESSION["categary"] =$row['categary'];
+							header('Location:../admin/Home.php');//redirected to admin logged in page.
 						}
 				
 			}

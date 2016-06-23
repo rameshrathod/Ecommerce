@@ -1,3 +1,10 @@
+      
+      
+        	<?php 		
+
+	//include 'all_categaries.php';
+			
+	?>
         <div id = "loginform">
 		    <p>Login Window</p>
 
@@ -37,6 +44,7 @@
                 <form method = "post" action = "register.php" name="frm">
                 	<input type ="text" id = "FirstName" placeholder = "First Name" name = "fname">
                 	<input type ="text" id = "LastName" placeholder = "Last Name" name = "lname">
+                	<!-- 
                 	<input type ="date" id = "dob" placeholder = "date of birth" name = "dob"><br><br>
                 	<label id="check">
                 		Gender :<input type="radio" name="gender" value="male" checked> Male
@@ -65,6 +73,7 @@
 					<input type = "text" id = "pinCode" name = "pincode" placeholder = "Enter pin code">
 					              		<br/>
               		<br>
+              		 -->
 					<input type = "email" id = "email" name = "emailId" placeholder = "Email Id">
               		<input type = "text" id = "mobileNumber" name = "mnumber" placeholder = "Mobile Number">
 
@@ -72,7 +81,7 @@
               		
               		
               		<input type = "password" id = "password" name = "pass" placeholder = "Create password">
-                	<input type = "password" id = "cpassword" name = "cpass" placeholder = "re-enter password">
+                	<input type = "password" id = "cpassword" name = "cpass" placeholder = "confirm password">
                		 <input type = "submit" id = "dologin" value = "Register"><br><br><br>
                 
             </form>
@@ -87,6 +96,7 @@
                 <form method = "post" action = "register.php" name="frm" onclick="return validateform()">
                 	<input type ="text" id = "FirstName" placeholder = "First Name" name = "fname">
                 	<input type ="text" id = "LastName" placeholder = "Last Name" name = "lname">
+                	<!-- 
                 	<input type ="date" id = "dob" placeholder = "date of birth" name = "dob"><br><br>
                 	<label id="check">
                 		Gender :<input type="radio" name="gender" value="male" checked> Male
@@ -115,6 +125,7 @@
 					<input type = "text" id = "pinCode" name = "pincode" placeholder = "Enter pin code">
 					              		<br/>
               		<br>
+              		 -->
 					<input type = "email" id = "email" name = "emailId" placeholder = "Email Id">
               		<input type = "text" id = "mobileNumber" name = "mnumber" placeholder = "Mobile Number">
 
@@ -154,16 +165,21 @@
 		     <hr color="white" width="50%">
 
                 <input type = "image" id = "close_login5" src = "images/close.png">
-               
-            
-					</font size="8" color="red">
-							<table>
+
+					 	<table>
 						<tr>	
 						
 							<th>Electronics</th>
+							<th>Fashion</th>
+							<th>Kids and Toys</th>
+							<th>Home and Kitchen/th>
+							<th>Automotive</th>
+							<th>Books and Musics</th>
 		
 			
 							</tr>
+							
+							
              			<tr>
              			<td >
              			
@@ -254,6 +270,6 @@
 			                  </td>
 			                </tr>        
              </table>
-            	</font>
+            
 
         </div>

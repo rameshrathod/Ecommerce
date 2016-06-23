@@ -1,11 +1,15 @@
+
+
 <html>
 <head>
- <title>CybShopee</title>  
+<title>CybShopee</title>
 </head>
-   
+ 
 <body>
-<?php 
+<?php
+
 include 'menu.html';
+
 ?>
 <div id="menu"> 
 
@@ -14,17 +18,11 @@ include 'menu.html';
 	include 'popUpContentPage.php';
 			
 	?>
-        <div id="slider">
-        <?php      
-        include 'slider.html';
-        ?>       
-        </div>
 
-            
         <div id="content" style="margin: -25px 10px 0px -25px;">
             	<?php           	
 				//include 'productWork/homeContent.php';	
-				include 'productWork/show_home_content.php';											
+				include 'productWork/show_product_details.php';											
 				?> 
      	</div>
  

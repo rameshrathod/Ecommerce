@@ -1,8 +1,8 @@
 
 <link rel='stylesheet' type='text/css' href='css/temp.css'><script src='valid.js'></script>
 <?php
-include 'database/DB.php';
-include 'PageInit.php';
+include_once 'database/DB.php';
+include_once 'PageInit.php';
 
 //create obj of DB
 $db=new DB();
@@ -12,6 +12,7 @@ $db->getConnection();
 $records1=$db->fetchRecordsForHome('mobile');
 $records2=$db->fetchRecordsForHome('vehicle');
 $records3=$db->fetchRecordsForHome('book');
+
 //$records4=$db->fetchRecordsForHome('men');
 //$records5=$db->fetchRecordsForHome('women');
 //$records6=$db->fetchRecordsForHome('kid');

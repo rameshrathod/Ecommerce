@@ -1,7 +1,7 @@
 
 <?php 
-include './database/DB.php';
-include 'PageInit.php';
+include_once '../database/DB.php';
+include_once 'PageInit.php';
 
 
 //check parameter present in url otherwise set to defaults
