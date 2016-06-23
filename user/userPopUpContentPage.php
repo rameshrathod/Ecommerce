@@ -9,7 +9,7 @@
           <div id = "forgotpass">		
 		    <p>Forgot password window</p>
 
-                		<input type = "image" id = "close_login2" src = "../images/close.png">
+                		<input type = "image" id = "close_login2" src = "images/close.png">
                 <form method = "post" action = "forgetpass.php">
                			<input type ="text" id = "email" placeholder = "Email Id" name = "eid"><br><br>
              			<input type ="text" id = "mobile" placeholder = "Mobile Number" name = "mobno"><br><br>
@@ -22,7 +22,7 @@
 		
 		    <p>About Us Window</p>
 
-                		<input type = "image" id = "close_login4" src = "../images/close.png">
+                		<input type = "image" id = "close_login4" src = "images/close.png">
                 <form method = "post" action = "forgetpass.php">
                 <p><input type = "image" id = "my_img" src = "images/imgA.jpg"></p>
                 <br>
@@ -42,7 +42,7 @@
 		    <hr color="black" width="75%">
 		     <hr color="white" width="50%">
 
-                <input type = "image" id = "close_login5" src = "../images/close.png">
+                <input type = "image" id = "close_login5" src = "images/close.png">
 
 					 	<table>
 						<tr>	

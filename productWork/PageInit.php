@@ -31,16 +31,20 @@ class PageInit
 			{
 			if($result = mysqli_fetch_array($records))
 				{
-				echo "<div class='mini-product'><center>";
+				echo "<div id='mini-product'><center>";
 				echo '<img src="data:image/jpeg;base64,'.base64_encode( $result['product_img'] ).'" id="product-img"/>';
 				echo '<p id="product-content-p">';
 				echo '<br><b>Name:</b>'.$result['product_name'].'<br>';
 				echo '<br><b>Price:</b>'.$result['product_price'].'<br>';
 				echo '<br><b>Discount:</b>'.$result['product_discount'].'<br>';
-				echo "<a href='details.php?pid=".$result['product_id']."'><input type='button' value='View Details' id='product-detail-btn'/></a>";
+				
 				
 				echo '<p>';
-				echo "</center></div>";
+				
+				echo "</center>";
+				echo "<a href='details.php?pid=".$result['product_id']."'><input type='button' value='View Details' id='product-detail-btn'/></a>";
+				echo "</div>";
+				
 				}
 			}
 		echo "</div>";
@@ -343,16 +347,19 @@ class PageInit
 			$records->data_seek($k);
 				    if($result = mysqli_fetch_array($records))
 				    {
-						echo "<div class='mini-product'><center>";
-						echo '<img src="data:image/jpeg;base64,'.base64_encode( $result['product_img'] ).'" id="product-img"/>';
-						echo '<p id="product-content-p">';
-						echo '<br><b>Name:</b>'.$result['product_name'].'<br>';
-						echo '<br><b>Price:</b>'.$result['product_price'].'<br>';
-						echo '<br><b>Discount:</b>'.$result['product_discount'].'<br>';
-						echo "<a href='details.php?pid=".$result['product_id']."'><input type='button' value='View Details' id='product-detail-btn'/></a>";
+				echo "<div id='mini-product'><center>";
+				echo '<img src="data:image/jpeg;base64,'.base64_encode( $result['product_img'] ).'" id="product-img"/>';
+				echo '<p id="product-content-p">';
+				echo '<br><b>Name:</b>'.$result['product_name'].'<br>';
+				echo '<br><b>Price:</b>'.$result['product_price'].'<br>';
+				echo '<br><b>Discount:</b>'.$result['product_discount'].'<br>';
 				
-						echo '<p>';
-						 echo "</center></div>";
+				
+				echo '<p>';
+				
+				echo "</center>";
+				echo "<a href='details.php?pid=".$result['product_id']."'><input type='button' value='View Details' id='product-detail-btn'/></a>";
+				echo "</div>";
 				   	 }						
 			}
 			echo "</div>";
@@ -504,16 +511,19 @@ class PageInit
 					$records->data_seek($k);
 				    if($result = mysqli_fetch_array($records))
 				    {
-						echo "<div class='mini-product'><center>";
-						echo '<img src="data:image/jpeg;base64,'.base64_encode( $result['product_img'] ).'" id="product-img"/>';
-						echo '<p id="product-content-p">';
-						echo '<br><b>Name:</b>'.$result['product_name'].'<br>';
-						echo '<br><b>Price:</b>'.$result['product_price'].'<br>';
-						echo '<br><b>Discount:</b>'.$result['product_discount'].'<br>';
-						echo "<a href='details.php?pid=".$result['product_id']."'><input type='button' value='View Details' id='product-detail-btn'/></a>";
+				echo "<div id='mini-product'><center>";
+				echo '<img src="data:image/jpeg;base64,'.base64_encode( $result['product_img'] ).'" id="product-img"/>';
+				echo '<p id="product-content-p">';
+				echo '<br><b>Name:</b>'.$result['product_name'].'<br>';
+				echo '<br><b>Price:</b>'.$result['product_price'].'<br>';
+				echo '<br><b>Discount:</b>'.$result['product_discount'].'<br>';
 				
-						echo '<p>';
-						 echo "</center></div>";
+				
+				echo '<p>';
+				
+				echo "</center>";
+				echo "<a href='details.php?pid=".$result['product_id']."'><input type='button' value='View Details' id='product-detail-btn'/></a>";
+				echo "</div>";
 				   	 }			
 				}
 				echo "</div>";
@@ -565,24 +575,49 @@ class PageInit
 		
 		public function dispProductDetails($records)
 		{
+			
 			if($result = mysqli_fetch_array($records))
-			{
-				echo "<div class='details-of-product'><center>";
+			{echo "<div id='details-of-product'><center>";
+				echo '<form action="cart.php">';
 				echo '<img src="data:image/jpeg;base64,'.base64_encode( $result['product_img'] ).'" id="product-img"/>';
-				echo '<p id="product-content-p">';
-				echo '<br><b>Name:</b>'.$result['product_name'].'<br>';
-				echo '<br><b>Price:</b>'.$result['product_price'].'<br>';
-				echo '<br><b>Discount:</b>'.$result['product_discount'].'<br>';
+				echo '<div id="details-product-p">';
+				echo '<input type="hidden" name="pid2" value='.$result['product_id'].'>';
 				
-				echo "<a href='details.php?pid=".$result['product_id']."'><input type='button' value='Add To Cart' id='product-detail-btn'/></a>";
-				echo "<a href='details.php?pid=".$result['product_id']."'><input type='button' value='Buy' id='product-detail-btn'/></a>";
-				echo '<br><b>Product Description:</b><br>'.$result['product_description'].'<br>';
-				echo '<p>';
+				echo '<table><tr><td><b>Name:</b></td><td>'.$result['product_name'].'</td></tr>';
+				echo '<tr><td><b>Price:</b></td><td>'.$result['product_price'].'</td></tr>';
+				echo '<tr><td><b>Discount:</b></td><td>'.$result['product_discount'].'</td></tr>';
+				echo '<tr><td><b>Quantity Availbale:</b></td><td>'.$result['product_quantity'].'</td></tr>';
+						if($result['product_quantity']!=0)
+						{
+				echo '<tr><td><b>Select Quantity :</b></td><td><input type="number" min="1" max="'.$result['product_quantity'].'" name="userQuantity" value="1" style="width: 50px;"></td></tr></table><br>';
+				echo "<input type='submit' value='Add To Cart' name='cartButton' id='product-detail-btn'/><br>";
+				echo "<input type='submit' value='Buy'  name='buyButton' id='product-detail-btn'/></form>";
+						}
+						else {
+							echo '<tr><td><b>Product out of stock</b></td></tr></table><br>';
+						}
+				
+				
+				echo '</div>';
 				echo "</center></div>";
+				
+				echo "<div id='product-description'><b>Product Description:</b>".$result['product_description']."</div>";
 			}
 			
 		}
 		
+		
+		
 	
 }//end of class
 ?>
+
+
+
+
+
+
+
+
+
+

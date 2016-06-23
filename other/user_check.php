@@ -42,7 +42,7 @@ else
 							$_SESSION['timeout'] = time();
 							$_SESSION["user_id"] =$row['user_id'];
 							$_SESSION["categary"] =$row['categary'];
-							header('Location:../user/home.php');//redirected to user logged in page.
+							header('Location:../home.php');//redirected to user logged in page.
 						}
 						else if($row['categary']=="admin")//categary is checked
 						{
@@ -50,7 +50,7 @@ else
 							$_SESSION['timeout'] = time();
 							$_SESSION["user_id"] =$row['user_id'];
 							$_SESSION["categary"] =$row['categary'];
-							header('Location:../admin/Home.php');//redirected to admin logged in page.
+							header('Location:../adminHome.php');//redirected to admin logged in page.
 						}
 				
 			}

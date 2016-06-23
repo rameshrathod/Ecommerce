@@ -1,6 +1,6 @@
 
 <?php 
-include_once '../database/DB.php';
+include 'database/DB.php';
 include_once 'PageInit.php';
 
 

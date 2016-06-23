@@ -17,7 +17,7 @@ include 'menu.html';
         <div id="content" style="margin: -25px 10px 0px -25px;">
             	<?php           	
 				//include 'productWork/homeContent.php';	
-				include_once './productWork/show_product_by_search.php';											
+				include './productWork/show_product_by_search.php';											
 				?> 
      	</div>
 		

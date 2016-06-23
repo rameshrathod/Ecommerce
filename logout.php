@@ -8,7 +8,8 @@ session_start();
    session_unset();
    // destroy the session 
    session_destroy(); 
-	header('Location:index.php');
+   echo "<script>alert('logout successfully');window.location='./index.php';</script>";
+	//header('Location:./index.php');
 
 ?>
 

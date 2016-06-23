@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "urvari";
-$password = 1234;
+$username = "root";
+$password = "root";
 $dbname = "ecommerce";
 
 // Create connection
@@ -19,6 +19,7 @@ $result = $conn->query($sql) or die("query failed");
 	echo "</tr>";
  
 if ($row = $result->fetch_assoc()) {
+	
     // output data of each row
 	
 	echo "<tr>";
