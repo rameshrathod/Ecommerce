@@ -20,9 +20,13 @@ include 'menu.html';
 				include './productWork/show_product_by_search.php';											
 				?> 
      	</div>
-		
-     	
+    	
 </div> 
  
+ <footer>
+		<?php           	
+		include 'footer.html';											
+		?> 
+</footer>
 </body>
 </html>

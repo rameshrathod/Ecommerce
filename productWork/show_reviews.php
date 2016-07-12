@@ -14,12 +14,12 @@ $db=new DB();
 //geting connection to mysql
 $db->getConnection();
 //get records from db using method by passing table name,coulmn array,order and order column
-$records=$db->fetchProductDetails('product_details',$pid);
+$records=$db->fetchReview($pid);
 //close connectiobn
 $db->closeConnection();
 
 //create obj of pageInit
 $p=new PageInit();
 //call method to display records by passing records,per page count and requested page no
-$p->dispProductDetails($records);
+$p->dispReviews($records);
 ?>

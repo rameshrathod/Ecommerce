@@ -159,6 +159,15 @@
 	
 	}
 	
+	
+	public function fetchReview($pid)
+	{
+		$sql_query="select reviews.*,user_details.first_name,user_details.last_name from reviews join user_details on user_details.user_id=reviews.user_id where product_id=\"$pid\" order by review_ratings desc";
+		$result = $this->db_connection->query($sql_query);
+		return $result;
+	}
+	
+	
 	public function closeConnection()
 	{
 		$this->db_connection=null;

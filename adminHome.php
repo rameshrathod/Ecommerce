@@ -44,6 +44,12 @@ include 'admin/adminmenu.html';
           
 </div>
 
+
+<footer>
+		<?php           	
+		include 'footer.html';											
+		?> 
+</footer>
 </body>
 </html>
 

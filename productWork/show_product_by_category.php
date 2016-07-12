@@ -1,8 +1,7 @@
-
+<link rel='stylesheet' type='text/css' href='temp.css'><script src='valid.js'></script>
 <?php 
 include_once 'database/DB.php';
 include_once 'PageInit.php';
-
 
 //check parameter present in url otherwise set to defaults
 if (!isset($_GET['records_per_page']))
@@ -53,14 +52,21 @@ else{
 	
 }
 
-if (!isset($_GET['search']))
+if (!isset($_GET['cat']))
 {
-	$search='';
+	$cat='';
 }
 else{
-	$search=$_GET['search'];
+	$cat=$_GET['cat'];
 }
 
+if (!isset($_GET['subcat']))
+{
+	$subcat='';
+}
+else{
+	$subcat=$_GET['subcat'];
+}
 
 //providing columns in form of array to be display 
 $cols=['*'];
@@ -70,13 +76,13 @@ $db=new DB();
 //geting connection to mysql
 $db->getConnection();
 //get records from db using method by passing table name,coulmn array,order and order column
-$records=$db->fetchRecordsBySearch('product_details',$cols,$sort_by,$sort_col,$search);
+$records=$db->fetchRecordsByCategory('product_details',$cols,$sort_by,$sort_col,$cat,$subcat);
 //close connectiobn
 $db->closeConnection();
 
 //create obj of pageInit
 $p=new PageInit();
 //call method to display records by passing records,per page count and requested page no
-$p->dispProductBySearch($records,$records_per_page,$req_page,$sort,$search);
+$p->dispProductByCategory($records,$records_per_page,$req_page,$sort,$cat,$subcat);
 
 ?>

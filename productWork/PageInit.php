@@ -138,8 +138,7 @@ class PageInit
 		<form action='#' onsubmit='return validate()' method='get'>
 				
 			Display records per page :&nbsp;
-			<select  name='records_per_page' onchange="this.form.submit()">
-				<option value='5' >--select--</option>
+			<select  name='records_per_page' onchange="this.form.submit()">				
 				<option value='5' <?php if($records_per_page=='5'){echo("selected");}?>>5</option>
 				<option value='10' <?php if($records_per_page=='10'){echo("selected");}?>>10</option>
 				<option  value='15' <?php if($records_per_page=='15'){echo("selected");}?>>15</option>
@@ -293,12 +292,12 @@ class PageInit
 			}				
 		?>
 		<center>
+		<br>
 		<div class='page-init-control'>
 			<form action='#' onsubmit='return validate()' method='get'>
 					
 				Display records per page :&nbsp;
-				<select  name='records_per_page' onchange="this.form.submit()">
-						<option value='4' >--select--</option>
+				<select  name='records_per_page' onchange="this.form.submit()">						
 						<option value='4' <?php if($records_per_page=='4'){echo("selected");}?> >4</option>
 						<option value='8' <?php if($records_per_page=='8'){echo("selected");}?>>8</option>
 						<option  value='12' <?php if($records_per_page=='12'){echo("selected");}?>>12</option>
@@ -310,7 +309,6 @@ class PageInit
 					
 				Sort Product By :&nbsp;
 				<select  name='sort' onchange="this.form.submit()">
-						<option value='OldToNew' >--select--</option>
 				 		<option value='OldToNew' <?php if($sort=='OldToNew'){echo("selected");}?>>Older to Newer</option>
 						<option value='NewToOld' <?php if($sort=='NewToOld'){echo("selected");}?>>Newer to Older</option>
 						<option  value='LowToHigh' <?php if($sort=='LowToHigh'){echo("selected");}?>>Low price to high</option>
@@ -340,7 +338,8 @@ class PageInit
 		<?php 
 			
 			//print rows
-			echo "<div>";		
+			echo "<div>";
+			echo "<div id='categary-header'><b>Products from $cat</b></div>";
 			for($k=$start;$k<$end;$k++)
 			{  
 				
@@ -461,8 +460,7 @@ class PageInit
 				<form action='#' method='get'>
 						
 					Display records per page :&nbsp;
-					<select  name='records_per_page' onchange="this.form.submit()">
-							<option value='4' >--select--</option>
+					<select  name='records_per_page' onchange="this.form.submit()">							
 							<option value='4' <?php if($records_per_page=='4'){echo("selected");}?> >4</option>
 							<option value='8' <?php if($records_per_page=='8'){echo("selected");}?>>8</option>
 							<option  value='12' <?php if($records_per_page=='12'){echo("selected");}?>>12</option>
@@ -474,7 +472,6 @@ class PageInit
 						
 					Sort Product By :&nbsp;
 					<select  name='sort' onchange="this.form.submit()">
-							<option value='OldToNew' >--select--</option>
 					 		<option value='OldToNew' <?php if($sort=='OldToNew'){echo("selected");}?>>Older to Newer</option>
 							<option value='NewToOld' <?php if($sort=='NewToOld'){echo("selected");}?>>Newer to Older</option>
 							<option  value='LowToHigh' <?php if($sort=='LowToHigh'){echo("selected");}?>>Low price to high</option>
@@ -590,7 +587,7 @@ class PageInit
 						if($result['product_quantity']!=0)
 						{
 				echo '<tr><td><b>Select Quantity :</b></td><td><input type="number" min="1" max="'.$result['product_quantity'].'" name="userQuantity" value="1" style="width: 50px;"></td></tr></table><br>';
-				echo "<input type='submit' value='Add To Cart' name='cartButton' id='product-detail-btn'/><br>";
+				echo "<input type='submit' value='Add To Cart' name='cartButton' id='product-detail-btn'/><br><br>";
 				echo "<input type='submit' value='Buy'  name='buyButton' id='product-detail-btn'/></form>";
 						}
 						else {
@@ -606,6 +603,47 @@ class PageInit
 			
 		}
 		
+		
+		
+		
+		
+		public function dispReviews($records)
+		{
+			echo "<div id='all-review'>";
+			$num=$records->num_rows;
+			 if($num!=0)
+			 {
+				if($num<=3)
+				{
+					while($result = mysqli_fetch_array($records))
+					{echo "<div id='review'>";
+					 echo "<b> Review By- </b>".$result['first_name']." ".$result['last_name']."<br><br>";
+					 echo "<b> Ratings Given- </b>".$result['review_ratings']."/5<br><br>";
+					 echo "<b> Review- </b><p>".$result['review_description']."</p>";
+					 echo "</div><hr color='black' width='100%'><br>";
+					}
+				}
+				else
+				 {
+				 	for($i=0;$i<=3;$i++)
+				 	{
+				 	$result = mysqli_fetch_array($records);
+				 	echo "<div id='review'";
+				 	echo "<b> Review By- </b>".$result['first_name']." ".$result['last_name']."<br><br>";
+				 	echo "<b> Ratings Given- </b>".$result['review_ratings']."/5<br><br>";
+				 	echo "<b> Review- <b><p>".$result['review']."</p>";
+				 	echo "</div><hr color='black' width='100%'><br>";
+				 	}
+					
+				 }
+			 }
+		 
+			else {
+				echo "<br><b>No Review found</b>";
+			}
+			echo "</div>";
+		}
+
 		
 		
 	

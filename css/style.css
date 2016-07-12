@@ -55,9 +55,9 @@
     text-decoration: none;
     } 
     table{
-        font-size: 11px;
+        font-size: 13px;
     white-space: pre-line;
-    line-height: normal;
+/*     line-height: 27px; */
     font-weight: normal;
     font-stretch: extra-condensed;
     text-align: inherit;
@@ -79,11 +79,11 @@
     height: 350px;
     margin-top: 12px;
     margin-bottom: 25px;
-    margin-left: -20px;
+    margin-left: 160px;
     margin-right: 10px;
     border-top-left-radius: 90px;
         background-color: peachpuff;
-    border-radius: 3px;
+    border-radius: 15px;
     box-shadow: 0px 0px 10px 0px #424242;
     box-sizing: border-box;
     font-family: helvetica;
@@ -109,7 +109,7 @@
     margin-top: 40px;
     font-size: 22px;
     color: #FFFFFF;
-    margin-left: 39px;
+    margin-left: 90px;
     color: black;
 }
 #loginform #login
@@ -117,8 +117,9 @@
    width:250px;
    height:40px;
    border:2px solid silver;
-   border-radius:3px;
+   border-radius:7px;
    padding:5px;
+   margin-left: 40px;
 }
 #loginform #password
 {
@@ -126,17 +127,18 @@
    width:250px;
    height:40px;
    border:2px solid silver;
-   border-radius:3px;
+   border-radius:7px;
    padding:5px;
+   margin-left: 40px;
 }
 #loginform #dologin
 {
-   margin-left:-5px;
+   margin-left:7px;
    margin-top:10px;
    width:100px;
    height:40px;
    border:none;
-   border-radius:3px;
+   border-radius:7px;
    color:#FFFFFF;
    background-color:#2C3E50;
    font-size:25px;
@@ -147,6 +149,7 @@
    margin-top:5px;
    font-size:22px;
    color:#FFFFFF;
+   border-radius:7px;
 }
 #loginform #forgot_pass
 {
@@ -158,17 +161,18 @@ margin-left:-5px;
    border-radius:3px;
    color:#FFFFFF;
    background-color:#2C3E50;
+   border-radius:7px;
    font-size:25px;
 }
 
 #loginform #show_register1
 {
-    margin-left: 103px;
-    margin-top: 10px;
+   margin-left: 60px;
+margin-top: 35px;
     width: 210px;
     height: 40px;
     border: none;
-    border-radius: 3px;
+    border-radius: 7px;
     color: #FFFFFF;
     background-color: #2C3E50;
     font-size: 25px;
@@ -181,10 +185,10 @@ margin-left:-5px;
     width: 430px;
     height: 350px;
     margin-top: 10px;
-    margin-left: -20px;
+    margin-left: 130px;
     margin-right: 10px;
     margin-bottom: 30px;
-    border-radius: 3px;
+    border-radius: 15px;
     background-color: peachpuff;
     box-shadow: 0px 0px 10px 0px #424242;
     padding: 10px;
@@ -197,7 +201,7 @@ margin-left:-5px;
 {
  	position: absolute;
     /* top: 120px; */
-    margin-left: 365px;
+    margin-left: 390px;
     margin-top: -90px;
     /* left: 480px; */
     width: 20px;
@@ -207,7 +211,7 @@ margin-left:-5px;
 #registerform p
 {
     margin-top: 40px;
-    margin-left: 60px;
+    margin-left: 90px;
     font-size: 22px;
    
     color: black;
@@ -342,7 +346,7 @@ margin-left:-5px;
 {
 	margin-left:-5px;
    margin-top:10px;
-   margin-left: 80px;
+   margin-left: 90px;
    width:210px;
    height:40px;
    border:none;
@@ -713,7 +717,7 @@ margin-top: 40px;
 #products #close_login5
 {
     position: absolute;
-    margin-top: -50px;
+    margin-top: -35px;
     margin-left: 900px;
     /* top: 110px; */
     /* left: 920px; */
@@ -805,6 +809,7 @@ background-color: antiquewhite;
     margin: 10px;
     margin-left: -5px;
     border: 2px solid;
+    padding-top: 8px;
 }
 #show-search
 {
@@ -838,7 +843,7 @@ background-color: antiquewhite;
 {
     font-size: 15px;
     white-space: pre-line;
-    line-height: 2;
+    line-height: 45px;
     font-weight: 200;
     font-stretch: extra-condensed;
     text-align: inherit;
@@ -852,4 +857,23 @@ background-color: antiquewhite;
     margin-left: 15px;
     padding: 20px;
     border-radius: 10px;
+}
+
+#foot
+{
+	background-color: rgb(79, 164, 218);
+width: 105%;
+height: 50px;
+margin-left: 55px;
+padding-top: 10px;
+}
+#all-review
+{
+background-color: rgb(196, 243, 245);
+border: 1px solid;
+border-radius: 15px;
+width: 695px;
+margin-left: 15px;
+margin-top: 38px;
+padding: 24px;
 }

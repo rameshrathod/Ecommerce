@@ -6,7 +6,7 @@
 			
 	?>
         <div id = "loginform">
-		    <p>Login Window</p>
+		    <p><b>Login Window</b></p>
 
                 <input type = "image" id = "close_login" src = "images/close.png">
                 <form method = "post" action = "./other/user_check.php">
@@ -23,7 +23,7 @@
         
         
           <div id = "forgotpass">		
-		    <p>Forgot password window</p>
+		    <p><b>Forgot password window</b></p>
 
                 		<input type = "image" id = "close_login2" src = "images/close.png">
                 <form method = "post" action = "forgetpass.php">
@@ -38,7 +38,7 @@
         
         
         <div id = "registerform">
-				    <p>New User Registration</p>
+				    <p><b>New User Registration</b></p>
 
                 	<input type = "image" id = "close_login1" src = "images/close.png">
                 <form method = "post" action = "register.php" name="frm">
@@ -90,7 +90,7 @@
         
 <div id = "registerform1">
 		
-		    <p>New User Registration</p>
+		    <p><b>New User Registration</b></p>
 
                 	<input type = "image" id = "close_login3" src = "images/close.png">
                 <form method = "post" action = "register.php" name="frm" onclick="return validateform()">
@@ -142,7 +142,7 @@
 
         <div id = "aboutus">
 		
-		    <p>About Us Window</p>
+		    <p><b>About Us</b></p>
 
                 		<input type = "image" id = "close_login4" src = "images/close.png">
                 <form method = "post" action = "forgetpass.php">
@@ -159,25 +159,26 @@
       <div id ="products">
 		<BR/>
 		<center>
-		    Products
+		    <b>Products</b>
 		    </center>
 		    <hr color="black" width="75%">
-		     <hr color="white" width="50%">
+		  
 
                 <input type = "image" id = "close_login5" src = "images/close.png">
+                <div>
 
 					 	<table>
 						<tr>	
 						
-							<th>Electronics</th>
-							<th>Fashion</th>
-							<th>Kids and Toys</th>
-							<th>Home and Kitchen/th>
-							<th>Automotive</th>
-							<th>Books and Musics</th>
+							<th><a href='category_products.php?cat=Electronics'>Electronics</a></th>
+							<th><a href='category_products.php?cat=Fashion'>Fashion</a></th>
+							<th><a href='category_products.php?cat=Kids+and+Toys'>Kids and Toys</a></th>
+							<th><a href='category_products.php?cat=Home+and+Kitchen'>Home and Kitchen</a></th>
+							<th><a href='category_products.php?cat=Automotive'>Automotive</a></th>
+							<th><a href='category_products.php?cat=Sports,Music,Books'>Sports,Music,Books</a></th>
 		
 			
-							</tr>
+						</tr>
 							
 							
              			<tr>
@@ -185,27 +186,25 @@
              			
 		             		
 		             			<ul>
-						             <li><a href="">Mobiles and Tabs</a></li>
-						             <li><a href="">Computers and Laptops</a></li>
-						             <li><a href="">Tv and Audio-Video</a></li>
-						             <li><a href="">Home appliances</a></li>
-						             <li><a href="">Cameras and Accessories</a></li>
-						             <li><a href="">Stationary and Office Equipment</a></li>
-						             <li><a href="">Accessories</a></li>
+						             <li><a href="category_products.php?cat=Electronics&subcat=Mobiles+and+Tabs">Mobiles and Tabs</a></li>
+						             <li><a href="category_products.php?cat=Electronics&subcat=Computers+and+Laptops">Computers and Laptops</a></li>
+						             <li><a href="category_products.php?cat=Electronics&subcat=Tv+and+Audio-Video">Tv and Audio-Video</a></li>						             
+						             <li><a href="category_products.php?cat=Electronics&subcat=Cameras+and+Printers">Cameras and Printers</a></li>
+						             <li><a href="category_products.php?cat=Electronics&subcat=Stationary+and+Office+Equipment">Stationary and Office Equipment</a></li>
+						             <li><a href="category_products.php?cat=Electronics&subcat=All+Accessories">All Accessories</a></li>
 						            
 					             </ul>
 			      
 			             </td>
 			             <td>  
 						              <ul >
-						                 <li><a href="">Cloths</a></li>
-						                 <li><a href="">Footwear</a></li>
-						                 <li><a href="">Eyewear</a></li>
-						                 <li><a href="">Cloths</a></li>
-						                 <li><a href="">Bags and Luggage</a></li>
-						                 <li><a href="">Grooming & Personal Care</a></li>
-						                 <li><a href="">Watches</a></li>
-						                 <li><a href="">Fashion Accessories</a></li>
+						                 <li><a href="category_products.php?cat=Fashion&subcat=Clothing">Clothing</a></li>
+						                 <li><a href="category_products.php?cat=Fashion&subcat=Footwear">Footwear</a></li>
+						                 <li><a href="category_products.php?cat=Fashion&subcat=Eyewear">Eyewear</a></li>
+						                 <li><a href="category_products.php?cat=Fashion&subcat=Daily+Needs">Daily Needs</a></li>						           
+						                 <li><a href="category_products.php?cat=Fashion&subcat=Beauty+and+Personal+Care">Beauty and Personal Care</a></li>
+						                 <li><a href="category_products.php?cat=Fashion&subcat=Watches">Watches</a></li>
+						                 <li><a href="category_products.php?cat=Fashion&subcat=Fashion+Accessories">Fashion Accessories</a></li>
 						             
 			             			</ul>
 			        	
@@ -213,28 +212,25 @@
 			        	 <td>
 			        	
 			 					<ul >
-						                 <li><a href="">Toys and Games</a></li>
-						                 <li><a href="">Kids Accessories</a></li>
-						                 <li><a href="">Baby Care and Maternity</a></li>
-						                 <li><a href="">School Supplies</a></li>
-						                 <li><a href="">Bags and Luggage</a></li>
-						                 <li><a href="">Baby & Kids Room Essentials</a></li>
-						                 <li><a href="">Watches</a></li>
-						                 <li><a href="">Fashion Accessories</a></li>
+			 						   	<li><a href="category_products.php?cat=Kids+and+Toys&subcat=Kids+Clothing">Kids Clothing</a></li>
+						                 <li><a href="category_products.php?cat=Kids+and+Toys&subcat=Toys+and+Games">Toys and Games</a></li>
+						                 <li><a href="category_products.php?cat=Kids+and+Toys&subcat=Baby+Care+and+Maternity">Baby Care and Maternity</a></li>
+						                 <li><a href="category_products.php?cat=Kids+and+Toys&subcat=School+Supplies">School Supplies</a></li>
+						                 <li><a href="category_products.php?cat=Kids+and+Toys&subcat=Kids+Room+Essentials">Kids Room Essentials</a></li>					                
+						                 <li><a href="category_products.php?cat=Kids+and+Toys&subcat=Kids+Accessories">Kids Accessories</a></li>
 						             
 			             		</ul>
 			               </td>
 			               <td>
 			           
 				               <ul >
-						                 <li><a href="">Cloths</a></li>
-						                 <li><a href="">Footwear</a></li>
-						                 <li><a href="">Eyewear</a></li>
-						                 <li><a href="">Cloths</a></li>
-						                 <li><a href="">Bags and Luggage</a></li>
-						                 <li><a href="">Grooming & Personal Care</a></li>
-						                 <li><a href="">Watches</a></li>
-						                 <li><a href="">Fashion Accessories</a></li>
+						                 <li><a href="category_products.php?cat=Home+and+Kitchen&subcat=Kitchen+Electronics">Kitchen Electronics</a></li>
+						                 <li><a href="category_products.php?cat=Home+and+Kitchen&subcat=Kitchen+Appliances">Kitchen Appliances</a></li>
+						                 <li><a href="category_products.php?cat=Home+and+Kitchen&subcat=Home+Furnishing">Home Furnishing</a></li>
+						                 <li><a href="category_products.php?cat=Home+and+Kitchen&subcat=Home+Decor">Home Decor</a></li>
+						                 <li><a href="category_products.php?cat=Home+and+Kitchen&subcat=Kitchenware">Kitchenware</a></li>
+						                 <li><a href="category_products.php?cat=Home+and+Kitchen&subcat=Tools+and+Hardware">Tools and Hardware</a></li>
+						              
 						             
 			             		</ul>
 			            
@@ -242,28 +238,25 @@
 			                <td>
 			                
 				                	<ul >
-						                 <li><a href="">Cloths</a></li>
-						                 <li><a href="">Footwear</a></li>
-						                 <li><a href="">Eyewear</a></li>
-						                 <li><a href="">Cloths</a></li>
-						                 <li><a href="">Bags and Luggage</a></li>
-						                 <li><a href="">Grooming & Personal Care</a></li>
-						                 <li><a href="">Watches</a></li>
-						                 <li><a href="">Fashion Accessories</a></li>
+						                 <li><a href="category_products.php?cat=Automotive&subcat=Bikes+and+Scooters">Bikes & Scooters</a></li>
+						                 <li><a href="category_products.php?cat=Automotive&subcat=Motors">Motors</a></li>
+						                 <li><a href="category_products.php?cat=Automotive&subcat=Parts+and+Spares">Parts and Spares</a></li>
+						                 <li><a href="category_products.php?cat=Automotive&subcat=Bike+Accessories">Bike Accessories</a></li>
+						                 <li><a href="category_products.php?cat=Automotive&subcat=Car+Accessories">Car Accessories</a></li>
+						               
 						             
 			             		</ul>
 			                 </td>
 			                 <td>
 			                 
 				                 <ul>
-						                 <li><a href="">Cloths</a></li>
-						                 <li><a href="">Footwear</a></li>
-						                 <li><a href="">Eyewear</a></li>
-						                 <li><a href="">Cloths</a></li>
-						                 <li><a href="">Bags and Luggage</a></li>
-						                 <li><a href="">Grooming & Personal Care</a></li>
-						                 <li><a href="">Watches</a></li>
-						                 <li><a href="">Fashion Accessories</a></li>
+						                 <li><a href="category_products.php?cat=Sports,Music,Books&subcat=Sport+Equipment">Sport Equipment</a></li>
+						                 <li><a href="category_products.php?cat=Sports,Music,Books&subcat=Fitness+Equipment">Fitness Equipment</a></li>
+						                 <li><a href="category_products.php?cat=Sports,Music,Books&subcat=Sport+Accessories">Sport Accessories</a></li>
+						                 <li><a href="category_products.php?cat=Sports,Music,Books&subcat=Musical+Instruments">Musical Instruments</a></li>
+						                 <li><a href="category_products.php?cat=Sports,Music,Books&subcat=Literature+and+Fiction">Literature and Fiction</a></li>
+						                 <li><a href="category_products.php?cat=Sports,Music,Books&subcat=Children+Books">Children Books</a></li>
+						          		  <li><a href="category_products.php?cat=Sports,Music,Books&subcat=Educational+Books">Educational Books</a></li>
 						             
 			             		</ul>
 			                 
@@ -271,5 +264,6 @@
 			                </tr>        
              </table>
             
+            </div>
 
         </div>

@@ -49,6 +49,11 @@ include 'user/usermenu.html';
      	</div>     
 </div>
 
+<footer>
+		<?php           	
+		include 'footer.html';											
+		?> 
+</footer>
 </body>
 </html>
 
